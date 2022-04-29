@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Sans Normal Regular", "Helvetica Neue", "Helvetica", sans-serif;
   margin: 0;
@@ -14,6 +10,9 @@ body {
   padding-bottom: 10px;
 }
 
+* {
+  box-sizing: border-box;
+}
 
 html {
   height: 100%
@@ -26,13 +25,12 @@ main {
 
 main div.box {
   display: flex;
-  flex: auto;
   background-color: white;
   flex-direction: row;
   margin: 0.5rem;
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 main div.box div div {
@@ -50,7 +48,8 @@ main div.box div div img {
 main div div img {
   width: 250px;
   height: 100%;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 main div div p {
@@ -62,3 +61,46 @@ main div div h1 {
   font-size: 1.2rem;
   position: center;
 }
+
+@media (max-width: 598px) {
+  main div div img {
+    display: none;
+  }
+
+  main {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  body{
+    justify-content: left;
+  }
+
+  main div div div h1 {
+    display: none;
+  }
+
+}
+
+@media (min-width: 598px) {
+  main div div h2{
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  main div.box {
+    flex-direction: column;
+  }
+  
+
+  main div div img {
+    width: 500px;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
+
