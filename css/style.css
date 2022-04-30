@@ -1,13 +1,4 @@
-/* body {
-  font-family: "Sans Normal Regular", "Helvetica Neue", "Helvetica", sans-serif;
-  margin: 0;
-  display: flex;
-  height: inherit;
-  background-color: #4b2e83;
-  justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-} */
+
 
 * {
   box-sizing: border-box;
@@ -25,50 +16,6 @@ body {
   font-size: 44px;
   color: white;
 }
-
-/* .content {
-  display: flex;
-  flex-direction: column;
-} */
-
-/* main div.box {
-  display: flex;
-  background-color: white;
-  flex-direction: row;
-  margin: 0.5rem;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
-  justify-content: space-between;
-} */
-
-/* main div.box div div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-} */
-
-/* main div.box div div img {
-  height: 40px;
-  width: 40px;
-  border-radius: 0px;
-} */
-
-/* main div div img {
-  width: 250px;
-  height: 100%;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-} */
-
-/* main div div p {
-  padding: 0.5rem;
-} */
-
-/* main div div h1 {
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  position: center;
-} */
 
 .map {
   display:flex;
@@ -95,8 +42,8 @@ body {
 
 .map_image {
   display: flex;
-  max-width: 100%;
-  padding: 0 1rem 1rem;
+  max-width: 800px;
+  padding: 0 .5rem .5rem;
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -141,17 +88,6 @@ footer a {
 footer p:last-child {
   padding-top: 8px;
 }
-
-
-
-  /* main div div img {
-    width: 500px;
-    height: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0px;
-  }
-} */
 
 /* top half of main page */
 
@@ -309,60 +245,6 @@ h1 {
       font-size: 0.45em;
   }
 }
-
-/* @media (min-width: 1024px) {
-  .searchbar {
-      width: 400px;
-  }
-
-  h2 {
-      font-size: 1.5em;
-  }
-  
-  .card-item img {
-      width: 450px;
-  }
-
-  .building {
-      font-size: 1.6em;
-  }
-
-  .card-item .floor {
-      font-size: 0.5em;
-  }
-}
-
-@media (max-width: 598px) {
-  main div div img {
-    display: none;
-  }
-
-  main {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  body{
-    justify-content: left;
-  }
-
-  main div div div h1 {
-    display: none;
-  }
-
-}
-
-@media (min-width: 598px) {
-  main div div h2{
-    display: none;
-  }
-}
-
-@media (min-width: 1200px) {
-  main div.box {
-    flex-direction: column;
-  } */
-
 
   /* Results start */
   body.results {
