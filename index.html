@@ -4,75 +4,62 @@
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Sydney Castillo, Amelia Ch'en, Nic Chin, Zach Kornas">
-    <meta name="description" content="An informational page about our app Dub Dumps">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap"
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;400;700;900&family=Open+Sans&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/proposal.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Dub Dumps</title>
 </head>
 
-<body>
-    <img class="poop" src="img/cursor.png" alt="Poop emoji" width="100px" height="100px">
-    <header>
-        <h1>Dub Dumps</h1>
+<main>
+    <header class="flex-container header">
+        <div class="flex-container logo-header">
+            <img src="img/logo.png" alt="Dub Dumps logo" class="logo">
+            <h1>DUB DUMPS</h1>
+        </div>
+        <div class="flex-container form">
+            <input type="text" placeholder="SEARCH" class="searchbar">
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>Problem Description</h2>
-            <p>
-                How can we make people feel more comfortable when they are most vulnerable? Our group aims to help
-                people
-                determine which bathroom on campus is right for them. Depending on the user, some bathrooms may meet
-                their sufficient needs while others do not. Some factors to consider are gender neutrality, stall size,
-                privacy, and overall proximity. As of right now, it is hard to find a definitive list of the bathrooms
-                on campus that also describe the features it offers. For instance, in more urgent scenarios, a user may
-                need to find the nearest bathroom that offers free personal hygiene products. In these kinds of
-                situations, the knowledge of what bathroom is conveniently available and equipped with necessary
-                features can affect the results of the rest of the day. A previous solution to this problem was a blog
-                called <a href="https://uwbathrooms.netlify.app/" target="_blank"> UW Bathrooms</a> which ran from 2012
-                to 2016. As
-                such, it has not been updated in 6 years and the
-                bathroom descriptions and ratings have become outdated. Thus, the goal of Dub Dumps is to support
-                our current community's public health, promote personal hygiene, and ultimately make our campus a more
-                accessible place.
-            </p>
-            <img class="map" src="img/Map.png" alt="Map of UW Campus">
-        </section>
-        <section>
-            <h2>App Description</h2>
-            <p>
-                Our application will mainly direct its focus towards the students of the University of Washington. It
-                will be helpful for students in their time of need, where they need to urgently find a bathroom worthy
-                of their standards before and after classes. However, our website could also branch out to include
-                guests of UW who want to find suitable public bathrooms they can use while visiting the campus. Our
-                users will be able to view information about the campus' bathrooms, including their location,
-                description, reviews from other users, and the overall rating. The original location data will be
-                collected from UW's <a href="https://depts.washington.edu/ceogis/Public/Accessibility/Map/"
-                    target="_blank"> public accessibility maps</a>, UW's <a
-                    href="https://sites.uw.edu/qcenter/wiki/gender-neutral-bathrooms/" target="_blank">existing gender
-                    neutral bathroom maps</a>, and personal experience from our group.
-            </p>
-            <p>
-                In our website, users will be able to create an account using their email, allowing them to save the
-                locations of the bathrooms they've previously visited and enjoyed, promoting personal efficiency and
-                customization. Created accounts will also be able to rate the bathrooms and provide reviews, so that
-                they can contribute to the community of UW's public hygiene. Finally, the application will have a search
-                function, where users can filter through bathrooms on campus that may or may not fit their needs, such
-                as having a high enough cleanliness rating, being gender neutral, or relative proximity to their
-                location. This interaction will create a more optimized experience for the user so that they can find
-                the bathroom they personally need.
-            </p>
-            <p>
-                Using this app will help improve student's lives during their school day by providing them with the
-                bathroom information they need. As of now, there are no bathroom rating applications out there geared
-                towards the UW campus, and the ones that partially solve this are blogs that are outdated, may be
-                misrepresented, and have no user functions. Our app will provide an updated look at our campus
-                bathrooms, with reviews being up-to-date so that users know exactly what to expect when walking into the
-                bathroom. Everyone needs to use the bathroom every day, so hopefully our app will be a reliable help for
-                students looking to meet their needs so that they can feel safe and comfortable.
-            </p>
-        </section>
-    </main>
-</body>
+
+    <body>
+
+        <h2 class="top-rated">Top Rated Bathrooms</h2>
+        <div class="flex-container br-cards">
+            <div class="card-item">
+                <img src="img/bathroom1.jpg" alt="bathroom one">
+                <p class="building">Suzzallo</p>
+                <p class="floor"> Floor Two</p>
+            </div>
+            <div class="card-item">
+                <img src="img/bathroom5.jpg" alt="bathroom five">
+                <p class="building">Lowe</p>
+                <p class="floor">Floor Three</p>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <main>
+                <div class="map">
+                    <h2 class="map_title">Find A Bathroom</h2>
+                    <!-- <hr class="map_line" size="9" width="75%" color="#b7a57a"> -->
+                    <img class="map_image" src="img/tempmap.png" alt="map">
+                    <p>Click a bathroom marked on campus to see its rating, characteristics, and distance from you!</p>
+                </div>
+            </main>
+            <footer>
+                <div class="container-fluid">
+                    <p><a href="mailto:dubdumps@uw.edu"><span class="material-icons">email</span> dubdumps@uw.edu</a>
+                    </p>
+                    <p><a href="tel:555-123-4567"><span class="material-icons">phone</span> 555-123-4567</a></p>
+                    <p>Dub Dumps is brought to you by University of Washington students Amelia, Nic, Sydney, and Zach,
+                        created as a final project for INFO 340. Hope the app helps you in your darkest times!</p>
+                </div>
+            </footer>
+
+    </body>
+</main>
 
 </html>
