@@ -91,8 +91,6 @@ main.results div div h1 {
   main.results div div h2{
     display: none;
   }
-  
-  
 }
 
 @media (min-width: 1200px) {
@@ -109,9 +107,8 @@ main.results div div h1 {
   }
 }
 
-/* Advanced Search Start*/
 .navbar {
-  width: auto;
+  width: 100%;
   overflow: hidden;
   background-color: #333;
 }
@@ -121,39 +118,26 @@ main.results div div h1 {
   display: flex;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 22px 22px;
   text-decoration: none;
   font-size: 20px;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: gray;
-  color: black;
+  background-color: #4b2e83;
+  color: white;
 }
 
 .navbar input[type=text] {
   float: right;
   padding: 6px;
   border: none;
-  margin-top: 8px;
+  color: lightgray;
+  margin-top: 17px;
   margin-right: 12px;
-  margin-left: 2px;
+  margin-left: 10px;
   font-size: 17px;
 }
-
- @media screen and (max-width: 600px) {
-  .topnav a, .topnav input[type=text] {
-    float: none;
-    display: flex;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;
-  }
-} 
 
 .dropdown {
   float: right;
@@ -165,7 +149,7 @@ main.results div div h1 {
   border: none;
   outline: none;
   color: white;
-  padding: 14px 14px;
+  padding: 22px 14px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
@@ -191,10 +175,24 @@ main.results div div h1 {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: rgb(208, 190, 224);
+  color: black;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-
 }
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: flex;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+} 
