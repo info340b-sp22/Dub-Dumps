@@ -1,123 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">  
+    <meta charset="UTF-8">
     <title>Results</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;400;700;900&family=Open+Sans&display=swap"
+        rel="stylesheet">
     <!-- normalize.css for cross-browser stuff -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="img/tpaper.png">
 </head>
-<div>
-<body>
-    <main>
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="#map">Map</a>
-            <input type="text" placeholder="Search..">
-            <div class="dropdown">
-              <button class="dropbtn">Sort By:
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="#">Location</a>
-                <a href="#">Rating</a>
-                <a href="#">Proximity</a>
-              </div>
-            </div>
-          </div>
-    </main>
-</body>
-<body class="results">
-    <main class="results">
-        <div class="box">
-            <div class="image">
-                <img src="img/bathroom1.jpg" alt="Public Restroom">
-            </div>
-            <div class="card-main">
-                <h1>Suzzallo Second Floor</h1>
-                <p>This is the first bathroom.</p>
-                <div class="card-content">
-                    <img src="img/Map.png" alt="Map">
-                    <img src="img/review.png" alt="Review">
-                    <img src="img/star.png" alt="Star">
-                    <h1>5/5</h1>
-                    <h2>Review 5/5</h2>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="image">
-                <img src="img/bathroom2.jpg" alt="Public Restroom">
-            </div>
-            <div class="card-main">
-                <h1>Smith First Floor South</h1>
-                <p>This is the second bathroom.</p>
-                <div class="card-content">
-                    <img src="img/Map.png" alt="Map">
-                    <img src="img/review.png" alt="Review">
-                    <img src="img/star.png" alt="Star">
-                    <h1>4/5</h1>
-                    <h2>Review 4/5</h2>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="image">
-                <img src="img/bathroom3.jpg" alt="Public Restroom">
-            </div>
-            <div class="card-main">
-                <h1>Kane First Floor</h1>
-                <p>This is the third bathroom.</p>
-                <div class="card-content">
-                    <img src="img/Map.png" alt="Map">
-                    <img src="img/review.png" alt="Review">
-                    <img src="img/star.png" alt="Star">
-                    <h1>4.5/5</h1>
-                    <h2>Review 4.5/5</h2>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="image">
-                <img src="img/bathroom4.jpg" alt="Public Restroom">
-            </div>
-            <div class="card-main">
-                <h1>Pop Health First Floor</h1>
-                <p>This is the fourth bathroom.</p>
-                <div class="card-content">
-                    <img src="img/Map.png" alt="Map">
-                    <img src="img/review.png" alt="Review">
-                    <img src="img/star.png" alt="Star">
-                    <h1>3/5</h1>
-                    <h2>Review 3/5</h2>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="image">
-                <img src="img/bathroom5.jpg" alt="Public Restroom">
-            </div>
-            <div class="card-main">
-                <h1>Lowe Third Floor</h1>
-                <p>This is the fifth bathroom.</p>
-                <div class="card-content">
-                    <img src="img/Map.png" alt="Map">
-                    <img src="img/review.png" alt="Review">
-                    <img src="img/star.png" alt="Star">
-                    <h1>4.5/5</h1>
-                    <h2>Review 4.5/5</h2>
-                </div>
-            </div>
-        </div>
 
-    </main>
+<main>
+    <header>
+        <nav class="nav">
+            <ul class="flex-container navlist">
+                <li class="navlogo"><a href="index.html"><img src="img/logo.png" alt=""></a></li>
+                <li class="navlist-item"><a href="#map">Map</a></li>
+                <li class="navlist-item">Sort By:
+                    <ul class="navlist-dropdown">
+                        <li><a href="#">Location</a></li>
+                        <li><a href="#">Rating</a></li>
+                        <li><a href="#">Proximity</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="flex-container form">
+                <input type="text" placeholder="SEARCH" class="searchbar">
+            </div>
+        </nav>
+    </header>
 
-</body>
-</div>
+    <body>
+        <div class="flex-container br-cards">
+            <div class="card-item">
+                <img src="img/bathroom1.jpg" alt="Public Restroom" class="br-img">
+                <div class="vertical-flex card-content">
+                    <p class="building">Suzzallo</p>
+                    <p class="floor"> Second Floor</p>
+                    <div class="card-icons">
+                        <img src="img/Map.png" alt="Map" class="icon">
+                        <img src="img/review.png" alt="Leave a review" class="icon">
+                        <img src="img/star.png" alt="Star" class="icon">
+                        <p class="review">5/5</p>
+                    </div>
+                </div>
+            </div>
 
-</html>
+            <div class="card-item">
+                <img src="img/bathroom2.jpg" alt="Public Restroom" class="br-img">
+                <div class="vertical-flex card-content">
+                    <p class="building">Smith</p>
+                    <p class="floor">First Floor</p>
+                    <div class="card-icons">
+                        <img src="img/Map.png" alt="Map" class="icon">
+                        <img src="img/review.png" alt="Leave a review" class="icon">
+                        <img src="img/star.png" alt="Star" class="icon">
+                        <p class="review">4/5</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-item">
+                <img src="img/bathroom3.jpg" alt="Public Restroom" class="br-img">
+                <div class="vertical-flex card-content">
+                    <p class="building">Kane</p>
+                    <p class="floor">First Floor</p>
+                    <div class="card-icons">
+                        <img src="img/Map.png" alt="Map" class="icon">
+                        <img src="img/review.png" alt="Leave a review" class="icon">
+                        <img src="img/star.png" alt="Star" class="icon">
+                        <p class="review">4/5</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-item">
+                <img src="img/bathroom4.jpg" alt="Public Restroom" class="br-img">
+                <div class="vertical-flex card-content">
+                    <p class="building">Population Health</p>
+                    <p class="floor">Second Floor</p>
+                    <div class="card-icons">
+                        <img src="img/Map.png" alt="Map" class="icon">
+                        <img src="img/review.png" alt="Leave a review" class="icon">
+                        <img src="img/star.png" alt="Star" class="icon">
+                        <p class="review">4/5</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-item">
+                <img src="img/bathroom5.jpg" alt="Public Restroom" class="br-img">
+                <div class="vertical-flex card-content">
+                    <p class="building">Lowe</p>
+                    <p class="floor">Third Floor South</p>
+                    <div class="card-icons">
+                        <img src="img/Map.png" alt="Map" class="icon">
+                        <img src="img/review.png" alt="Leave a review" class="icon">
+                        <img src="img/star.png" alt="Star" class="icon">
+                        <p class="review">4/5</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</main>
