@@ -1,18 +1,11 @@
 import React, { useState } from 'react'; //import React Component
 import BathroomList from './BathroomList.js'
+import Building from './Building.js'
+import Floor from './Floor.js'
+import Stall from './Stall.js'
+import Rating from './Rating.js'
 
 function App(props) {
-
- let sortByBuilding = [];
-
-  const handleClick = value => {
-    if(!sortByBuilding.includes(value)){
-      sortByBuilding.push(value);
-    } else {
-      sortByBuilding.filter(value);
-    }
-    console.log(sortByBuilding);
-  }
 
   return (
     <div>
@@ -25,136 +18,16 @@ function App(props) {
         <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-              <a class="nav-category dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">
-                Building
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" onClick={handleClick('MGH')}/>
-                  <label class="form-check-label" for="dropdownCheck">
-                    MGH
-                  </label>
-                </div>
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" onClick={handleClick('GWN')}/>
-                  <label class="form-check-label" for="dropdownCheck">
-                    GWN
-                  </label>
-                </div>
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" onClick={handleClick('KNE')}/>
-                  <label class="form-check-label" for="dropdownCheck">
-                    KNE
-                  </label>
-                </div>
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" onClick={handleClick('ODE')}/>
-                  <label class="form-check-label" for="dropdownCheck">
-                    ODE
-                  </label>
-                </div>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Clear</a>
-              </div>
+              <Building />
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-category dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">
-                Floor
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                  <label class="form-check-label" for="dropdownCheck">
-                    Basement
-                  </label>
-                </div>
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                  <label class="form-check-label" for="dropdownCheck">
-                    First Floor
-                  </label>
-                </div>
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                  <label class="form-check-label" for="dropdownCheck">
-                    Second Floor
-                  </label>
-                </div>
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                  <label class="form-check-label" for="dropdownCheck">
-                    Third or Higher
-                  </label>
-                </div>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Clear</a>
-              </div>
+              <Floor />
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-category dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Stall Type
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                  <label class="form-check-label" for="dropdownCheck">
-                    Private Room
-                  </label>
-                </div>
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                  <label class="form-check-label" for="dropdownCheck">
-                    Individual Stall
-                  </label>
-                </div>
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                  <label class="form-check-label" for="dropdownCheck">
-                    Urinal
-                  </label>
-                </div>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Clear</a>
-              </div>
+              <Stall />
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-category dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Rating
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                  <label class="form-check-label" for="dropdownCheck">
-                    1 Star
-                  </label>
-                </div>
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                  <label class="form-check-label" for="dropdownCheck">
-                    2 Star
-                  </label>
-                </div>
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                  <label class="form-check-label" for="dropdownCheck">
-                    3 Star
-                  </label>
-                </div>
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                  <label class="form-check-label" for="dropdownCheck">
-                    4 Star
-                  </label>
-                </div>
-                <div class="drop-item">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
-                  <label class="form-check-label" for="dropdownCheck">
-                    5 Star
-                  </label>
-                </div>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Clear</a>
-              </div>
+              <Rating />
             </li>
 
           </ul>
