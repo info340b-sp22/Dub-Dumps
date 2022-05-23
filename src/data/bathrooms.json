@@ -1,36 +1,50 @@
 [
   {
+    "id": 1,
+    "src": "img/bathroom1.jpg",
     "building": "MGH",
     "floor": "First Floor",
-    "stall":"Private Room",
+    "stall": "Private Room",
     "rating": "4"
   },
   {
+    "id": 2,
+    "src": "img/bathroom2.jpg",
     "building": "ODE",
     "floor": "Second Floor",
     "rating": "2"
   },
   {
+    "id": 3,
+    "src": "img/bathroom3.jpg",
     "building": "KNE",
     "floor": "Second Floor",
     "rating": "5"
   },
   {
+    "id": 4,
+    "src": "img/bathroom4.jpg",
     "building": "GWN",
     "floor": "First Floor",
     "rating": "3"
   },
   {
+    "id": 5,
+    "src": "img/bathroom5.jpg",
     "building": "ODE",
     "floor": "Individual Floor",
     "rating": "1"
   },
   {
+    "id": 6,
+    "src": "img/bathroom1.jpg",
     "building": "KNE",
     "floor": "Basement",
     "rating": "4"
   },
   {
+    "id": 7,
+    "src": "img/bathroom2.jpg",
     "building": "MGH",
     "floor": "Third Floor",
     "rating": "5"
