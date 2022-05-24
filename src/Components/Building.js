@@ -1,52 +1,36 @@
 import React, { useState } from 'react'; //import React Component
 
-export function Building (props) {
+export function Building(props) {
+    const [bldgSelected, setBldg] = useState('');
 
-    let sortByBuilding = [];
-
-    const handleClick = value => {
-        if(!sortByBuilding.includes(value)){
-          sortByBuilding.push(value);
-        } else {
-          sortByBuilding.filter(value);
-        }
-        console.log(sortByBuilding);
+    const changeBldg = evt => {
+        setBldg(evt.target.value);
     }
 
+    const handleClick = evt => {
+        props.filterCallback(bldgSelected);
+    }
+
+    const buildings = props.buildings.map((building) => {
+        return <option key={building} value={building}>{building}</option>
+    })
+
     return (
-        <div>
-            <a className="nav-category dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">
-                Building
-            </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <div className="drop-item">
-                    <input type="checkbox" className="form-check-input" id="dropdownCheck" onClick={handleClick('MGH')}/>
-                    <label className="form-check-label" htmlFor="dropdownCheck">
-                        MGH
-                    </label>
-                    </div>
-                    <div className="drop-item">
-                    <input type="checkbox" className="form-check-input" id="dropdownCheck" onClick={handleClick('GWN')}/>
-                    <label className="form-check-label" htmlFor="dropdownCheck">
-                        GWN
-                    </label>
-                    </div>
-                    <div className="drop-item">
-                    <input type="checkbox" className="form-check-input" id="dropdownCheck" onClick={handleClick('KNE')}/>
-                    <label className="form-check-label" htmlFor="dropdownCheck">
-                        KNE
-                    </label>
-                    </div>
-                    <div className="drop-item">
-                    <input type="checkbox" className="form-check-input" id="dropdownCheck" onClick={handleClick('ODE')}/>
-                    <label className="form-check-label" htmlFor="dropdownCheck">
-                        ODE
-                    </label>
-                    </div>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="#">Clear</a>
-                </div>
+        <li className="nav-item dropdown d-flex">
+            <select id="buildingSelect" className="nav-category dropdown-toggle form-select" onChange={changeBldg} >
+                <option value="">Building</option>
+                {buildings}
+            </select>
+            <div className="col-auto">
+                <button id="submitButton" type="submit" className="btn btn-warning" onClick={handleClick}>Apply Filter</button>
             </div>
+            {/* <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <select id="buildingSelect" className="nav-category dropdown-toggle mr-5 form-select" >
+                    <option value="">Show all teams</option>
+                    {buildings}
+                </select>
+            </div> */}
+        </li>
     )
 }
 

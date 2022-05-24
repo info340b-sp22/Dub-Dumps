@@ -13,7 +13,7 @@ function App(props) {
         <Header />
         <Routes>
           <Route exact path='/home' element={<HomePage />} />
-          <Route path='/search' element={<SearchPage />} />
+          <Route path='/search' element={<SearchPage data={props.data} />} />
         </Routes>
       </Router>
       <Footer />

@@ -30,7 +30,7 @@ function BathroomCard(props) {
 }
 
 export default function BathroomList(props) {
-    let bathrooms = bathroomData;
+    let bathrooms = props.data;
     let bathroomCards = bathrooms.map(bathroomData => {
         return <BathroomCard key={bathroomData.id} bathroomData={bathroomData} />
     })
