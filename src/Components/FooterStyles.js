@@ -24,15 +24,15 @@ export const Container = styled.div`
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
 `;
    
 export const Row = styled.div`
-display: grid;
-justify-content: center;
-align-content: center;
-gap: 100px;
-grid-auto-flow: column;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4px;
+  align-items: center;
+  justify-items: center;
   @media (max-width: 1000px) {
     grid-template-columns: repeat(auto-fill, 
                            minmax(200px, 1fr));
@@ -65,5 +65,6 @@ export const Text = styled.p`
   font-size: 14px;
   color: #fff;
   margin-bottom: -40px;
+  margin-top: 20px;
   text-align: center;
 `;
