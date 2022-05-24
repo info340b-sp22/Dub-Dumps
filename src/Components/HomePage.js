@@ -6,9 +6,6 @@ export default function HomePage(props) {
     return(
         <>
         <Header />
-        <div className="flex-container form">
-            <input type="text" placeholder="SEARCH" className="searchbar" />
-        </div>
         <Map />
         </>
     )

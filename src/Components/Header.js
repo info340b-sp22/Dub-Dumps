@@ -8,6 +8,9 @@ export default function Header(props) {
                     <img src="img/logo.png" alt="Dub Dumps logo" className="logo" />
                     <h1 className="dub-dumps">DUB DUMPS</h1>
                 </div>
+                <div className="flex-container form">
+            <input type="text" placeholder="SEARCH" className="searchbar" />
+            </div>
             </header>
         </>
     )
