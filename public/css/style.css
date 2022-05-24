@@ -11,6 +11,11 @@ body {
     color: white;
 }
 
+.page-header {
+    background-color: black;
+    margin-top: 0;
+}
+
 /* SEARCH PAGE */
 
 .navbar {
@@ -112,6 +117,11 @@ body {
     margin-top: auto;
     margin-bottom: auto;
   }
+
+  .homeLink {
+      text-decoration: none;
+      color:white;
+  }
   
   .logo {
     width: 100px;
@@ -155,9 +165,10 @@ body {
     font-weight: 700;
     font-size: 54px;
     color:white;
+    margin-bottom: 0;
   }
 
-  .map-title:hover {
+  .homeLink:hover, .map-title:hover {
     -webkit-transition: color .25s;
     transition: color .25s;
     color: #85754d;
@@ -168,7 +179,6 @@ body {
     .header {
         display: flex;
         justify-content: space-between;
-        margin: 0.5em;
     }
   
     .logo-header {
