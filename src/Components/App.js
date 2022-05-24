@@ -1,14 +1,14 @@
 import React, { useState } from 'react'; //import React Component
-import Map from './Map.js';
 import SearchPage from './SearchPage.js';
+import HomePage from './HomePage.js';
 
 function App(props) {
 
   return (
-    <div>
-    <SearchPage />
-    <Map />
-    </div>
+    <>
+    <HomePage />
+    {/* <SearchPage /> */}
+    </>
   );
 }
 
