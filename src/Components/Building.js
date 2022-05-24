@@ -15,36 +15,36 @@ export function Building (props) {
 
     return (
         <div>
-            <a class="nav-category dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">
+            <a className="nav-category dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">
                 Building
             </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <div class="drop-item">
-                    <input type="checkbox" class="form-check-input" id="dropdownCheck" onClick={handleClick('MGH')}/>
-                    <label class="form-check-label" for="dropdownCheck">
+                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div className="drop-item">
+                    <input type="checkbox" className="form-check-input" id="dropdownCheck" onClick={handleClick('MGH')}/>
+                    <label className="form-check-label" htmlFor="dropdownCheck">
                         MGH
                     </label>
                     </div>
-                    <div class="drop-item">
-                    <input type="checkbox" class="form-check-input" id="dropdownCheck" onClick={handleClick('GWN')}/>
-                    <label class="form-check-label" for="dropdownCheck">
+                    <div className="drop-item">
+                    <input type="checkbox" className="form-check-input" id="dropdownCheck" onClick={handleClick('GWN')}/>
+                    <label className="form-check-label" htmlFor="dropdownCheck">
                         GWN
                     </label>
                     </div>
-                    <div class="drop-item">
-                    <input type="checkbox" class="form-check-input" id="dropdownCheck" onClick={handleClick('KNE')}/>
-                    <label class="form-check-label" for="dropdownCheck">
+                    <div className="drop-item">
+                    <input type="checkbox" className="form-check-input" id="dropdownCheck" onClick={handleClick('KNE')}/>
+                    <label className="form-check-label" htmlFor="dropdownCheck">
                         KNE
                     </label>
                     </div>
-                    <div class="drop-item">
-                    <input type="checkbox" class="form-check-input" id="dropdownCheck" onClick={handleClick('ODE')}/>
-                    <label class="form-check-label" for="dropdownCheck">
+                    <div className="drop-item">
+                    <input type="checkbox" className="form-check-input" id="dropdownCheck" onClick={handleClick('ODE')}/>
+                    <label className="form-check-label" htmlFor="dropdownCheck">
                         ODE
                     </label>
                     </div>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Clear</a>
+                    <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="#">Clear</a>
                 </div>
             </div>
     )

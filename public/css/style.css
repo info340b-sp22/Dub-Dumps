@@ -90,4 +90,36 @@ body {
     display: inline;
 }
 
+.map {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .map-image {
+    max-width: 90%;
+    padding: 0 .5rem .5rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .map p {
+    margin-top:.1rem;
+    font-style:italic;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+.map-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 54px;
+    color:white;
+  }
+
+  .map-title:hover {
+    -webkit-transition: color .25s;
+    transition: color .25s;
+    color: #85754d;
+  }
   
