@@ -1,12 +1,11 @@
 import React, { useState } from 'react'; //import React Component
 import BathroomList from './BathroomList.js'
-import Building from './Building.js'
+import StructuredSearch from './StructuredSearch.js'
 // import Floor from './Floor.js'
 // import Stall from './Stall.js'
 // import Rating from './Rating.js'
 
 export default function SearchPage(props) {
-    // console.log(props.data)
     const [displayedData, setData] = useState(props.data);
 
     function applyFilter(bldgName) {
@@ -14,18 +13,10 @@ export default function SearchPage(props) {
         if (bldgName === '') {
             setData(fullData);
         } else {
-            let bldgCards = fullData.filter(bldg => bldg.building === bldgName)
+            let bldgCards = fullData.filter(card => card.building === bldgName)
             setData(bldgCards);
         }
     }
-
-    let uniqueBuildings = new Set();
-    for (let i = 0; i < props.data.length; i++) {
-        uniqueBuildings.add(props.data[i].building)
-    }
-    console.log(uniqueBuildings)
-    uniqueBuildings = Array.from(uniqueBuildings);
-    console.log(uniqueBuildings)
 
     return (
         <div>
@@ -38,7 +29,7 @@ export default function SearchPage(props) {
                 <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item dropdown">
-                            <Building buildings={uniqueBuildings} filterCallback={applyFilter} />
+                            <StructuredSearch bathrooms={props.data} filterCallback={applyFilter} />
                         </li>
                         {/* <li className="nav-item dropdown">
                             <Floor />
