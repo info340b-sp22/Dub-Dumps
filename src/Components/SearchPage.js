@@ -11,21 +11,17 @@ export default function SearchPage(props) {
 
     function applyFilter(bldgName, floorName, ratingNum) {
         let fullData = props.data;
-        if (bldgName === '' && floorName === '' && ratingNum === '') {
-            setData(fullData);
-        } else {
-            let bldgCards = fullData
-            if(bldgName != ''){
-                bldgCards = bldgCards.filter(card => (card.building === bldgName))
-            }
-            if(floorName != ''){
-                bldgCards = bldgCards.filter(card => (card.floor === floorName))
-            }
-            if(ratingNum != ''){
-                bldgCards = bldgCards.filter(card => (card.rating === ratingNum))
-            }
-            setData(bldgCards);
+        let bldgCards = fullData
+        if(bldgName != ''){
+            bldgCards = bldgCards.filter(card => (card.building === bldgName))
         }
+        if(floorName != ''){
+            bldgCards = bldgCards.filter(card => (card.floor === floorName))
+        }
+        if(ratingNum != ''){
+            bldgCards = bldgCards.filter(card => (card.rating === ratingNum))
+        }
+        setData(bldgCards);
     }
 
     return (
