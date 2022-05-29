@@ -8,12 +8,22 @@ import StructuredSearch from './StructuredSearch.js'
 export default function SearchPage(props) {
     const [displayedData, setData] = useState(props.data);
 
-    function applyFilter(bldgName) {
+
+    function applyFilter(bldgName, floorName, ratingNum) {
         let fullData = props.data;
-        if (bldgName === '') {
+        if (bldgName === '' && floorName === '' && ratingNum === '') {
             setData(fullData);
         } else {
-            let bldgCards = fullData.filter(card => card.building === bldgName)
+            let bldgCards = fullData
+            if(bldgName != ''){
+                bldgCards = bldgCards.filter(card => (card.building === bldgName))
+            }
+            if(floorName != ''){
+                bldgCards = bldgCards.filter(card => (card.floor === floorName))
+            }
+            if(ratingNum != ''){
+                bldgCards = bldgCards.filter(card => (card.rating === ratingNum))
+            }
             setData(bldgCards);
         }
     }
@@ -31,16 +41,6 @@ export default function SearchPage(props) {
                         <li className="nav-item dropdown">
                             <StructuredSearch bathrooms={props.data} filterCallback={applyFilter} />
                         </li>
-                        {/* <li className="nav-item dropdown">
-                            <Floor />
-                        </li>
-                        <li className="nav-item dropdown">
-                            <Stall />
-                        </li>
-                        <li className="nav-item dropdown">
-                            <Rating />
-                        </li> */}
-
                     </ul>
                     {/* <form className="form-inline my-2 my-lg-0 search-button">
                         <input className="" type="search" placeholder="Search" aria-label="Search" />

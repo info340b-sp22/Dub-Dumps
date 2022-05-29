@@ -2,13 +2,23 @@ import React, { useState } from 'react'; //import React Component
 
 export function StructuredSearch(props) {
     const [bldgSelected, setBldg] = useState('');
+    const [floorSelected, setFloor] = useState('');
+    const [ratingSelected, setRating] = useState('');
 
     const changeBldg = evt => {
         setBldg(evt.target.value);
     }
 
+    const changeFloor = evt => {
+        setFloor(evt.target.value);
+    }
+
+    const changeRating = evt => {
+        setRating(evt.target.value);
+    }
+
     const handleClick = evt => {
-        props.filterCallback(bldgSelected);
+        props.filterCallback(bldgSelected, floorSelected, ratingSelected);
     }
 
     // Array of buildings
@@ -49,11 +59,11 @@ export function StructuredSearch(props) {
                 <option value="">Building</option>
                 {buildings}
             </select>
-            <select id="buildingSelect" className="nav-category dropdown-toggle form-select" onChange={changeBldg} >
+            <select id="buildingSelect" className="nav-category dropdown-toggle form-select" onChange={changeFloor} >
                 <option value="">Floor</option>
                 {floors}
             </select>
-            <select id="buildingSelect" className="nav-category dropdown-toggle form-select" onChange={changeBldg} >
+            <select id="buildingSelect" className="nav-category dropdown-toggle form-select" onChange={changeRating} >
                 <option value="">Rating</option>
                 {ratings}
             </select>
