@@ -9,7 +9,7 @@ export default function SearchPage(props) {
     const [displayedData, setData] = useState(props.data);
 
 
-    function applyFilter(bldgName, floorName, ratingNum) {
+    function applyFilter(bldgName, floorName, ratingNum, locationSelected) {
         let fullData = props.data;
         let bldgCards = fullData
         if(bldgName != ''){
@@ -20,6 +20,9 @@ export default function SearchPage(props) {
         }
         if(ratingNum != ''){
             bldgCards = bldgCards.filter(card => (card.rating === ratingNum))
+        }
+        if(locationSelected != ''){
+            bldgCards = bldgCards.filter(card => (card.location === locationSelected))
         }
         setData(bldgCards);
     }

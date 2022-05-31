@@ -4,6 +4,7 @@ export function StructuredSearch(props) {
     const [bldgSelected, setBldg] = useState('');
     const [floorSelected, setFloor] = useState('');
     const [ratingSelected, setRating] = useState('');
+    const [locationSelected, setLocation] = useState('');
 
     const changeBldg = evt => {
         setBldg(evt.target.value);
@@ -17,8 +18,12 @@ export function StructuredSearch(props) {
         setRating(evt.target.value);
     }
 
+    const changeLocation = evt => {
+        setLocation(evt.target.value);
+    }
+
     const handleClick = evt => {
-        props.filterCallback(bldgSelected, floorSelected, ratingSelected);
+        props.filterCallback(bldgSelected, floorSelected, ratingSelected, locationSelected);
     }
 
     // Array of buildings
@@ -42,14 +47,22 @@ export function StructuredSearch(props) {
         return <option key={floor} value={floor}>{floor}</option>
     })
 
+    // Array of Locations
+    let uniqueLocations = new Set();
+    for (let i = 0; i < props.bathrooms.length; i++) {
+        uniqueLocations.add(props.bathrooms[i].location)
+    }
+    uniqueLocations = Array.from(uniqueLocations);
+
+    const locations = uniqueLocations.map((location) => {
+        return <option key={location} value={location}>{location}</option>
+    })
+
     // Array of ratings, subject to change if we do thumbs up/down
     let ratings = [5, 4, 3, 2, 1]
 
     ratings = ratings.map((rating) => {
-        if (rating === 5) {
-            return <option key={rating} value={rating}>{rating} stars</option>
-        }
-        return <option key={rating} value={rating}>{rating}+ stars</option>
+        return <option key={rating} value={rating}>{rating} stars</option>
     })
 
 
@@ -66,6 +79,10 @@ export function StructuredSearch(props) {
             <select id="buildingSelect" className="nav-category dropdown-toggle form-select" onChange={changeRating} >
                 <option value="">Rating</option>
                 {ratings}
+            </select>
+            <select id="buildingSelect" className="nav-category dropdown-toggle form-select" onChange={changeLocation} >
+                <option value="">Location</option>
+                {locations}
             </select>
             <div className="col-auto">
                 <button id="submitButton" type="submit" className="btn btn-warning" onClick={handleClick}>Apply Filter</button>
