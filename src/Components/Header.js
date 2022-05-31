@@ -3,21 +3,18 @@ import { Link } from 'react-router-dom';
 
 export default function Header(props) {
     return (
-        <div className="page-header">
-            <header className="flex-container header">
-                <div className="flex-container logo-header">
-                    <img src="img/logo.png" alt="Dub Dumps logo" className="logo" />
-                    <Link to="/home" activeStyle className='homeLink'>
-                    <h1 className="dub-dumps">DUB DUMPS</h1>
-                    </Link>
-                </div>
-                <div className="flex-container form">
-            <input type="text" placeholder="SEARCH" className="searchbar" />
+        <header className="page-header">
+            <div className="header-flex px-1 py-1">
+                <img src="img/logo.png" alt="Dub Dumps logo" className="logo my-2" />
+                <Link to="/home" activestyle className='homeLink'>
+                    <h1 className="dub-dumps my-2">DUB DUMPS</h1>
+                </Link>
             </div>
-            </header>
-            <Link to="/search" activeStyle>
-            <h2 className="map-title"><a className="map-title" href="advanced search.html">Find A Bathroom</a></h2>
-            </Link>
-        </div>
+            {/* <img src="img/bathroom-symbol.png" alt="bathroom symbol" className="br-symbol" /> */}
+            {/* <div className="flex-container form">
+            need to have a way to link from home page to search page since we are removing nav
+            <input type="text" placeholder="SEARCH" className="searchbar" />
+            </div> */}
+        </header>
     )
 }

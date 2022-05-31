@@ -91,7 +91,7 @@
     "id": 13,
     "src": "img/bathroom12.jpg",
     "building": "WIL",
-    "floor": "Individual Floor",
+    "floor": "First Floor",
     "rating": "2",
     "location": "South"
   },
@@ -131,7 +131,7 @@
     "id": 18,
     "src": "img/bathroom17.jpg",
     "building": "CHB",
-    "floor": "Individual Floor",
+    "floor": "Fourth Floor",
     "rating": "5",
     "location": "South"
   },
@@ -156,7 +156,7 @@
     "src": "img/bathroom20.jpg",
     "building": "PDL",
     "floor": "Third Floor",
-    "rating": "5",
+    "rating": "2",
     "location": "East"
   },
   {
@@ -171,7 +171,7 @@
     "id": 23,
     "src": "img/bathroom2.jpg",
     "building": "ART",
-    "floor": "Individual Floor",
+    "floor": "First Floor",
     "rating": "5",
     "location": "North"
   },
@@ -235,7 +235,7 @@
     "id": 31,
     "src": "img/bathroom10.jpg",
     "building": "CHB",
-    "floor": "Individual Floor",
+    "floor": "Third Floor",
     "rating": "5",
     "location": "South"
   },
@@ -267,7 +267,7 @@
     "id": 35,
     "src": "img/bathroom14.jpg",
     "building": "PDL",
-    "floor": "Individual Floor",
+    "floor": "Second Floor",
     "rating": "5",
     "location": "East"
   },
