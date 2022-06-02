@@ -35,7 +35,7 @@
     "id": 5,
     "src": "img/bathroom5.jpg",
     "building": "CHB",
-    "floor": "Individual Floor",
+    "floor": "Third Floor",
     "rating": "1",
     "location": "South"
   },
@@ -83,7 +83,7 @@
     "id": 12,
     "src": "img/bathroom11.jpg",
     "building": "MGH",
-    "floor": "Second Floor",
+    "floor": "Fourth Floor",
     "rating": "4",
     "location": "South"
   },
@@ -163,7 +163,7 @@
     "id": 22,
     "src": "img/bathroom1.jpg",
     "building": "BRK",
-    "floor": "Second Floor",
+    "floor": "Fourth Floor",
     "rating": "4",
     "location": "North"
   },

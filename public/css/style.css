@@ -14,7 +14,7 @@ body {
 /* SEARCH PAGE */
 
 .navbar {
-    background-color: #e8e3d3;
+    background-color: #ffffff59;
 }
 
 .nav-category {
@@ -28,6 +28,10 @@ body {
 }
 
 #buildingSelect {
+    margin-left: 15px;
+}
+
+.form-select {
     width: 100px;
     margin-right: 15px;
 }
@@ -36,9 +40,13 @@ body {
     padding: 15px;
 } */
 
-.nav-logo {
+/* .nav-logo {
     padding: 10px;
-}
+} */
+
+/* #submitButton {
+    margin-left: auto;
+} */
 
 .card {
     width: 80%;

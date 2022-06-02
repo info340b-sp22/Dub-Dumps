@@ -68,19 +68,19 @@ export function StructuredSearch(props) {
 
     return (
         <li className="nav-item dropdown d-flex">
-            <select id="buildingSelect" className="nav-category dropdown-toggle form-select" onChange={changeBldg} >
+            <select id="buildingSelect" className="nav-category dropdown-toggle form-select select-dropdown" onChange={changeBldg} >
                 <option value="">Building</option>
                 {buildings}
             </select>
-            <select id="buildingSelect" className="nav-category dropdown-toggle form-select" onChange={changeFloor} >
+            <select id="floorSelect" className="nav-category dropdown-toggle form-select" onChange={changeFloor} >
                 <option value="">Floor</option>
                 {floors}
             </select>
-            <select id="buildingSelect" className="nav-category dropdown-toggle form-select" onChange={changeRating} >
+            <select id="ratingSelect" className="nav-category dropdown-toggle form-select" onChange={changeRating} >
                 <option value="">Rating</option>
                 {ratings}
             </select>
-            <select id="buildingSelect" className="nav-category dropdown-toggle form-select" onChange={changeLocation} >
+            <select id="locationSelect" className="nav-category dropdown-toggle form-select" onChange={changeLocation} >
                 <option value="">Location</option>
                 {locations}
             </select>

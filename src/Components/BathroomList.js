@@ -1,17 +1,15 @@
 import React, { useState } from 'react'; //import React Component
-import bathroomData from '../data/bathrooms.json'
+import { Link } from 'react-router-dom'
 
 function BathroomCard(props) {
     let bathroomData = props.bathroomData;
 
     return (
-        <div className="col-md-6 col-xl-4 d-flex justify-content-center">
+        <Link to={'search/bathroom/' + bathroomData.id} className="col-md-6 col-xl-4 d-flex justify-content-center" style={{color: 'white', textDecoration: 'none' }}>
             <div className="card mb-4">
+                <img src={bathroomData.src} className="pb-1 br-img" />
                 <div className="card-body p-0">
                     <div className="row">
-                        <div className="col-sm-auto col-xl-12 ml-auto mr-auto">
-                            <img src={bathroomData.src} className="pb-1 br-img" />
-                        </div>
                         <div className="col-sm">
                             <h2 className="card-title my-0">{bathroomData.building}</h2>
                             <p className="card-text my-0 floor">{bathroomData.floor}</p>
@@ -25,7 +23,7 @@ function BathroomCard(props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
