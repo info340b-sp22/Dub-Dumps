@@ -11,6 +11,17 @@ body {
     color: white;
 }
 
+/* BATHROOM PAGE */
+.bathroom-header {
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+
 /* SEARCH PAGE */
 
 .navbar {
@@ -188,6 +199,10 @@ body {
     .dub-dumps {
         margin-left: 15px;
     }
+
+    .bathroom-header {
+        font-size: 3em;
+    }
   }
   
   @media (min-width: 1024px) {
@@ -209,5 +224,9 @@ body {
   
     .card-item .floor {
         font-size: 0.5em;
+    }
+
+    .bathroom-header {
+        font-size: 4em;
     }
   }

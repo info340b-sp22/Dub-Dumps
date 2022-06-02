@@ -8,7 +8,6 @@ import StructuredSearch from './StructuredSearch.js'
 export default function SearchPage(props) {
     const [displayedData, setData] = useState(props.data);
 
-
     function applyFilter(bldgName, floorName, ratingNum, locationSelected) {
         let fullData = props.data;
         let bldgCards = fullData
@@ -19,7 +18,7 @@ export default function SearchPage(props) {
             bldgCards = bldgCards.filter(card => (card.floor === floorName))
         }
         if (ratingNum != '') {
-            bldgCards = bldgCards.filter(card => (card.rating === ratingNum))
+            bldgCards = bldgCards.filter(card => (card.rating >= ratingNum))
         }
         if (locationSelected != '') {
             bldgCards = bldgCards.filter(card => (card.location === locationSelected))

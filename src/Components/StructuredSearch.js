@@ -62,6 +62,9 @@ export function StructuredSearch(props) {
     let ratings = [5, 4, 3, 2, 1]
 
     ratings = ratings.map((rating) => {
+        if (rating !== 5) {
+            return <option key={rating} value={rating}>{rating}+ stars</option>
+        }
         return <option key={rating} value={rating}>{rating} stars</option>
     })
 
@@ -85,7 +88,7 @@ export function StructuredSearch(props) {
                 {locations}
             </select>
             <div className="col-auto">
-                <button id="submitButton" type="submit" className="btn btn-warning" onClick={handleClick}>Apply Filter</button>
+                <button id="submitButton" type="submit" className="btn btn-warning" onClick={handleClick}>Find a Bathroom!</button>
             </div>
         </li>
     )
