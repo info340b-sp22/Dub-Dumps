@@ -1,4 +1,5 @@
 import React, { useState } from 'react'; //import React Component
+import { Outlet } from 'react-router-dom';
 
 export function StructuredSearch(props) {
     const [bldgSelected, setBldg] = useState('');
@@ -28,8 +29,8 @@ export function StructuredSearch(props) {
 
     // Array of buildings
     let uniqueBuildings = new Set();
-    for (let i = 0; i < props.bathrooms.length; i++) {
-        uniqueBuildings.add(props.bathrooms[i].building)
+    for (let i = 0; i < props.data.length; i++) {
+        uniqueBuildings.add(props.data[i].building)
     }
     uniqueBuildings = Array.from(uniqueBuildings);
     const buildings = uniqueBuildings.map((building) => {
@@ -38,8 +39,8 @@ export function StructuredSearch(props) {
 
     // Array of floors
     let uniqueFloors = new Set();
-    for (let i = 0; i < props.bathrooms.length; i++) {
-        uniqueFloors.add(props.bathrooms[i].floor)
+    for (let i = 0; i < props.data.length; i++) {
+        uniqueFloors.add(props.data[i].floor)
     }
     uniqueFloors = Array.from(uniqueFloors);
 
@@ -49,8 +50,8 @@ export function StructuredSearch(props) {
 
     // Array of Locations
     let uniqueLocations = new Set();
-    for (let i = 0; i < props.bathrooms.length; i++) {
-        uniqueLocations.add(props.bathrooms[i].location)
+    for (let i = 0; i < props.data.length; i++) {
+        uniqueLocations.add(props.data[i].location)
     }
     uniqueLocations = Array.from(uniqueLocations);
 
@@ -70,27 +71,42 @@ export function StructuredSearch(props) {
 
 
     return (
-        <li className="nav-item dropdown d-flex">
-            <select id="buildingSelect" className="nav-category dropdown-toggle form-select select-dropdown" onChange={changeBldg} >
-                <option value="">Building</option>
-                {buildings}
-            </select>
-            <select id="floorSelect" className="nav-category dropdown-toggle form-select" onChange={changeFloor} >
-                <option value="">Floor</option>
-                {floors}
-            </select>
-            <select id="ratingSelect" className="nav-category dropdown-toggle form-select" onChange={changeRating} >
-                <option value="">Rating</option>
-                {ratings}
-            </select>
-            <select id="locationSelect" className="nav-category dropdown-toggle form-select" onChange={changeLocation} >
-                <option value="">Location</option>
-                {locations}
-            </select>
-            <div className="col-auto">
-                <button id="submitButton" type="submit" className="btn btn-warning" onClick={handleClick}>Find a Bathroom!</button>
-            </div>
-        </li>
+        <div>
+            <nav className="navbar navbar-expand-lg navbar-light mb-2">
+                {/* should we leave the logo out? also we still need to implement the hamburger menu functionality for mobile screens*/}
+                {/* <img className="nav-logo" src="./img/logo.png" width="50px" height="50px" /> */}
+                {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button> */}
+                <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+                    <ul className="navbar-nav mr-auto">
+                        <li className="nav-item dropdown"></li>
+                        <li className="nav-item dropdown d-flex">
+                            <select id="buildingSelect" className="nav-category dropdown-toggle form-select select-dropdown" onChange={changeBldg} >
+                                <option value="">Building</option>
+                                {buildings}
+                            </select>
+                            <select id="floorSelect" className="nav-category dropdown-toggle form-select" onChange={changeFloor} >
+                                <option value="">Floor</option>
+                                {floors}
+                            </select>
+                            <select id="ratingSelect" className="nav-category dropdown-toggle form-select" onChange={changeRating} >
+                                <option value="">Rating</option>
+                                {ratings}
+                            </select>
+                            <select id="locationSelect" className="nav-category dropdown-toggle form-select" onChange={changeLocation} >
+                                <option value="">Location</option>
+                                {locations}
+                            </select>
+                            <div className="col-auto">
+                                <button id="submitButton" type="submit" className="btn btn-warning" onClick={handleClick}>Find a Bathroom!</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav >
+            <Outlet />
+        </div >
     )
 }
 

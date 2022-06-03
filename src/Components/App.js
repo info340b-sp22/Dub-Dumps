@@ -1,4 +1,4 @@
-import React from 'react'; //import React Component
+import React, { useState } from 'react'; //import React Component
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import SearchPage from './SearchPage.js';
 import BathroomPage from './BathroomPage.js'
@@ -6,8 +6,28 @@ import HomePage from './HomePage.js';
 import Header from './Header.js';
 import Footer from './Footer.js';
 import BathroomList from './BathroomList.js';
+import StructuredSearch from './StructuredSearch.js';
 
 function App(props) {
+  const [displayedData, setData] = useState(props.data);
+
+  function applyFilter(bldgName, floorName, ratingNum, locationSelected) {
+    let fullData = props.data;
+    let bldgCards = fullData
+    if (bldgName != '') {
+      bldgCards = bldgCards.filter(card => (card.building === bldgName))
+    }
+    if (floorName != '') {
+      bldgCards = bldgCards.filter(card => (card.floor === floorName))
+    }
+    if (ratingNum != '') {
+      bldgCards = bldgCards.filter(card => (card.rating >= ratingNum))
+    }
+    if (locationSelected != '') {
+      bldgCards = bldgCards.filter(card => (card.location === locationSelected))
+    }
+    setData(bldgCards);
+  }
 
   return (
     <>
@@ -15,13 +35,11 @@ function App(props) {
         <Header />
         <Routes>
           <Route path='home' element={<HomePage />} />
-          <Route path='search' element={<SearchPage data={props.data} />} >
+          <Route path='search' element={<StructuredSearch data={props.data} filterCallback={applyFilter} />} >
             {/* i think this is how the routing should look? */}
-            {/* <Route path='/search/br:bathroomID' element={<BathroomPage />} /> */}
-            {/* <Route index element={<BathroomList data={props.data} displayedData={how do we get displayed data from search page?} />} /> */}
+            <Route path='/search/br:bathroomID' element={<BathroomPage data={props.data} />} />
+            <Route index element={<BathroomList data={displayedData} />} />
           </Route>
-          {/* path is here for now so we can view the page */}
-          <Route path='/bathroom' element={<BathroomPage />} />
           <Route path='*' element={<Navigate to="/home" />} />
         </Routes>
       </Router>
