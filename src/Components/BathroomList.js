@@ -5,7 +5,7 @@ function BathroomCard(props) {
     let bathroomData = props.bathroomData;
 
     return (
-        <Link to={'/search/br' + bathroomData.id} className="col-md-6 col-xl-4 d-flex justify-content-center" style={{color: 'white', textDecoration: 'none' }}>
+        <Link to={'/search/br' + bathroomData.id} className="col-md-6 col-xl-4 d-flex justify-content-center" style={{ color: 'white', textDecoration: 'none' }}>
             <div className="card mb-4">
                 <img src={bathroomData.src} className="pb-1 br-img" />
                 <div className="card-body p-0">

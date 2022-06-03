@@ -35,7 +35,6 @@ function App(props) {
         <Routes>
           <Route path='home' element={<HomePage />} />
           <Route path='search' element={<StructuredSearch data={props.data} filterCallback={applyFilter} />} >
-            {/* i think this is how the routing should look? */}
             <Route path='/search/br:bathroomID' element={<BathroomPage data={props.data} />} />
             <Route index element={<BathroomList data={displayedData} />} />
           </Route>
