@@ -1,6 +1,5 @@
 import React, { useState } from 'react'; //import React Component
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import SearchPage from './SearchPage.js';
 import BathroomPage from './BathroomPage.js'
 import HomePage from './HomePage.js';
 import Header from './Header.js';
@@ -14,16 +13,16 @@ function App(props) {
   function applyFilter(bldgName, floorName, ratingNum, locationSelected) {
     let fullData = props.data;
     let bldgCards = fullData
-    if (bldgName != '') {
+    if (bldgName !== '') {
       bldgCards = bldgCards.filter(card => (card.building === bldgName))
     }
-    if (floorName != '') {
+    if (floorName !== '') {
       bldgCards = bldgCards.filter(card => (card.floor === floorName))
     }
-    if (ratingNum != '') {
+    if (ratingNum !== '') {
       bldgCards = bldgCards.filter(card => (card.rating >= ratingNum))
     }
-    if (locationSelected != '') {
+    if (locationSelected !== '') {
       bldgCards = bldgCards.filter(card => (card.location === locationSelected))
     }
     setData(bldgCards);
