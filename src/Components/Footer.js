@@ -8,7 +8,7 @@ import {
   Heading,
   Text
 } from "./FooterStyles";
-  
+
 const Footer = () => {
   return (
     <Box>
@@ -26,14 +26,14 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink><a href="tel:555-123-4567">
-                    <span class="material-icons">Phone: </span>555-123-4567</a></FooterLink>
-            <FooterLink><a href="mailto:dubdumps@uw.edu">
-                    <span class="material-icons">Email: </span>dubdumps@uw.edu</a></FooterLink>
+            <FooterLink href="tel:555-123-4567">
+              <span className="material-icons">phone</span>555-123-4567</FooterLink>
+            <FooterLink href="mailto:dubdumps@uw.edu">
+              <span className="material-icons">email</span>dubdumps@uw.edu</FooterLink>
           </Column>
         </Row>
         <Text>Dub Dumps is brought to you by University of Washington students Amelia, Nic, Sydney, and Zach,
-            created as a final project for INFO 340. Hope the site helps you in your darkest times!
+          created as a final project for INFO 340. Hope the site helps you in your darkest times!
         </Text>
       </Container>
     </Box>

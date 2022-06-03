@@ -3,7 +3,7 @@ import Map from './Map.js';
 import Header from './Header.js';
 
 export default function HomePage(props) {
-    return(
+    return (
         <Map />
     )
 }

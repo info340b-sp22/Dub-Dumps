@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 export default function Map(props) {
     return (
         <div>
-            <Link to="/search" activeStyle>
+            <Link className="map-link" to="/search">
                 <h2 className="map-title">Find A Bathroom</h2>
             </Link>
             <div className="map">
-                <img className="map-image" src="img/tempmap.png" alt="map" />
-                <p>Click a bathroom marked on campus to see its rating, characteristics, and distance from you!</p>
+                <iframe className="map-image" src="https://snazzymaps.com/embed/398528" width="80%" height="550px"></iframe>
+                <p>Find out how far a bathroom is from you, and click on one to see its ratings!</p>
             </div>
         </div>
     );

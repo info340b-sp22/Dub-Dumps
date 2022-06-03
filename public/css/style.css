@@ -142,6 +142,12 @@ body {
     height: 60px;
 }
 
+.material-icons {
+    position: relative;
+    padding-right: .5rem;
+    top:5px;
+}
+
 /* .searchbar {
     font-family: inherit;
     font-size: 1rem;
@@ -174,14 +180,17 @@ body {
     text-align: center;
 }
 
+.map-link {
+    text-decoration: none;
+}
+
 .map-title {
     text-align: center;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 3em;
     color:white;
     margin-top: 1rem;
     margin-bottom: 0;
-    text-decoration: none;
 }
 
   .homeLink:hover, .map-title:hover {

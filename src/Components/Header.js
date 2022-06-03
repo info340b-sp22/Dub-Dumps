@@ -6,7 +6,7 @@ export default function Header(props) {
         <header className="page-header">
             <div className="header-flex px-1 py-1">
                 <img src="img/logo.png" alt="Dub Dumps logo" className="logo my-2" />
-                <Link to="/home" activestyle className='homeLink'>
+                <Link to="/home" className='homeLink'>
                     <h1 className="dub-dumps my-2">DUB DUMPS</h1>
                 </Link>
             </div>
