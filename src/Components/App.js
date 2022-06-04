@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; //import React Component
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { getDatabase, ref } from 'firebase/database';
+import { getDatabase, ref, set as FirebaseSet } from 'firebase/database';
 import BathroomPage from './BathroomPage.js'
 import HomePage from './HomePage.js';
 import Header from './Header.js';
@@ -10,7 +10,6 @@ import StructuredSearch from './StructuredSearch.js';
 
 function App(props) {
   const db = getDatabase();
-  console.log(ref(db))
 
   const [displayedData, setData] = useState(props.data);
 
