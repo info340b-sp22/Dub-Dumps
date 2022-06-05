@@ -1,11 +1,9 @@
 import React from 'react'; //import React Component
 import { useParams } from 'react-router-dom';
-import { getDatabase, ref, set as FirebaseSet } from 'firebase/database'
 
 import _ from 'lodash';
 
 export default function BathroomPage(props) {
-    const db = getDatabase();
 
     const bathroomID = useParams().bathroomID
     console.log(bathroomID)
@@ -18,7 +16,7 @@ export default function BathroomPage(props) {
     return (
         <div>
             <h2 className="bathroom-header">{bathroom.building} - {bathroom.floor}</h2>
-            <img src={bathroom.src} alt={"Bathroom in " + bathroom.building + " on the " + bathroom.floor} />
+            <img src={"/img/" + bathroom.src} alt={"Bathroom in " + bathroom.building + " on the " + bathroom.floor} />
             <p>If possible, we should have the bathroom's location on the map appear here</p>
             <h2 className="bathroom-header">Reviews</h2>
             <form>
