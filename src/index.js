@@ -4,7 +4,8 @@ import './index.css';
 
 import { initializeApp } from 'firebase/app';
 import App from './Components/App.js';
-import data from './data/bathrooms.json'
+//import data from './data/bathrooms.json'
+
 
 // App's Firebase configuration
 const firebaseConfig = {
@@ -20,12 +21,22 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const fetchData = fetch("./data/bathrooms.json")
+.then((response) => {
+  return response.json();
+})
+.then((data=> {
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(
   <React.StrictMode>
     <App data={data} />
   </React.StrictMode>
-);
+  );
+}));
+
+
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

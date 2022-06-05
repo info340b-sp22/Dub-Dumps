@@ -25,7 +25,7 @@ export default function BathroomPage(props) {
                 <div className="form-group">
                     <label for="review-input">Leave a review!
                         <textarea id="review-input" name="review-input" className="form-control" />
-                        <button type="submit" className="btn btn-warning" onClick={submitReview}>Submit</button>
+                        <button type="submit" className="btn btn-warning">Submit</button>
                     </label>
                 </div>
             </form>
