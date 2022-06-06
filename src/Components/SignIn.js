@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Dropdown from 'react-bootstrap/Dropdown';
 
 import { StyledFirebaseAuth } from 'react-firebaseui';
 
@@ -22,10 +21,10 @@ const FIREBASEUI_CONFIG = {
 export default function SignIn(props) {
     const auth = getAuth();
     return (
-        <div className="card bg-light">
-            <div className="container card-body">
-                <p className="lead">Sign in here!</p>
-                <StyledFirebaseAuth uiConfig={FIREBASEUI_CONFIG} firebaseAuth={auth} />
+        <div>
+            <div>
+                <h2>Sign in to rate your favorite bathrooms!</h2>
+                <StyledFirebaseAuth uiConfig={FIREBASEUI_CONFIG} firebaseAuth={auth} className="signin-ui"/>
             </div>
         </div>
     )

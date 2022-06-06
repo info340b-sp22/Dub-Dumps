@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Rating } from 'react-simple-star-rating'
+// import { Rating } from 'react-simple-star-rating'
 
 export default function StarRating() {
     const [rating, setRating] = useState(0);
@@ -13,7 +13,9 @@ export default function StarRating() {
                         type="button"
                         key={index}
                         className={index <= (hover || rating) ? "on" : "off"}
-                        onClick={() => setRating(index)}
+                        onClick={(
+
+                        ) => setRating(index)}
                         onMouseEnter={() => setHover(index)}
                         onMouseLeave={() => setHover(rating)}
                     >
