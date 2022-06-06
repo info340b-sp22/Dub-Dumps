@@ -18,6 +18,7 @@ body {
     letter-spacing: 0.1rem;
     margin-top: 1rem;
     text-align: center;
+    width: 100%
 }
 
 button {
@@ -39,11 +40,13 @@ button {
 .star-rating {
     display: flex;
     justify-content: center;
+    width: 100%
 }
 
 /* SEARCH PAGE */
 .navbar {
-    background-color: #ffffff59;
+    background-color: #9b7b7b59;
+    width: 100%;
 }
 
 .nav-category {
@@ -150,7 +153,7 @@ button {
 
 .header-flex {
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
 }
 
 .dub-dumps {
@@ -166,6 +169,7 @@ button {
 .logo {
     width: 60px;
     height: 60px;
+    margin-right: 10px;
 }
 
 .material-icons {
@@ -249,13 +253,29 @@ button {
      margin-top: 2em;
  }
 
-  @media (min-width: 720px) {
-    .header-flex {
-        justify-content: flex-start;
+  @media screen and (min-width: 480px) {
+    .dub-dumps {
+        margin-left: 8px;
     }
 
-    .dub-dumps {
-        margin-left: 15px;
+    .map p {
+        font-size: 0.8rem;
+    }
+
+    .bathroom-header {
+        font-size: 2em;
+    }
+
+    .material-icons {
+        font-size: 14px;
+        padding-right: .3rem;
+        top: 3px;
+    }
+  }
+
+  @media screen and (min-width: 720px) {
+    .header-flex {
+        justify-content: flex-start;
     }
 
     .map p {
@@ -265,9 +285,15 @@ button {
     .bathroom-header {
         font-size: 3em;
     }
+
+    .material-icons {
+        font-size: 24px;
+        padding-right: 1rem;
+        top: 5px;
+    }
   }
   
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     .map p{
         font-size: 1.3rem;
     }
@@ -294,5 +320,9 @@ button {
 
     .bathroom-header {
         font-size: 4em;
+    }
+
+    .material-icons {
+        font-size: 24px;
     }
   }

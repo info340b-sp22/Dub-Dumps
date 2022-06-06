@@ -15,7 +15,6 @@ export const Box = styled.div`
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     max-width: 1000px;
     margin: 0 auto;
     margin-top: -50px;
@@ -25,6 +24,7 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 15px 10px;
 `;
    
 export const Row = styled.div`
@@ -33,10 +33,6 @@ export const Row = styled.div`
   gap: 4px;
   align-items: center;
   justify-items: center;
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, 
-                           minmax(200px, 1fr));
-  }
 `;
    
 export const FooterLink = styled.a`
@@ -50,6 +46,10 @@ export const FooterLink = styled.a`
       color: purple;
       transition: 200ms ease-in;
   }
+  @media screen and (max-width: 720px) {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
 `;
    
 export const Heading = styled.p`
@@ -58,6 +58,10 @@ export const Heading = styled.p`
   color: #fff;
   margin-bottom: 40px;
   font-weight: bold;
+  @media screen and (max-width: 720px) {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
 `;
 
 export const Text = styled.p`
@@ -67,4 +71,7 @@ export const Text = styled.p`
   margin-bottom: -40px;
   margin-top: 20px;
   text-align: center;
+  @media screen and (max-width: 720px) {
+    font-size: 12px;
+  }
 `;
