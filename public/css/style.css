@@ -201,9 +201,32 @@ body {
   .homeLink:hover, .map-title:hover {
     -webkit-transition: color .25s;
     transition: color .25s;
-    color: #85754d;
+    color: #b7a57a;
   }
   
+
+ /* BATHROOM PAGE */
+
+ .bathroomPic {
+     display:block;
+     max-width: 45%;
+     height: auto;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .form-group {
+     display:flex;
+     justify-content: center;
+ }
+
+ .line-seperator {
+     border: 5px solid #b7a57a;
+     width: 65%;
+     margin-left: auto;
+     margin-right:auto;
+     margin-top: 2em;
+ }
 
   @media (min-width: 720px) {
     .header-flex {
