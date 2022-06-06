@@ -21,18 +21,18 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const fetchData = fetch("./data/bathrooms.json")
-.then((response) => {
-  return response.json();
-})
-.then((data=> {
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(
-  <React.StrictMode>
-    <App data={data} />
-  </React.StrictMode>
-  );
-}));
+fetch("./data/bathrooms.json")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data => {
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      <React.StrictMode>
+        <App data={data} />
+      </React.StrictMode>
+    );
+  }));
 
 
 

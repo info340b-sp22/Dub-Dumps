@@ -20,6 +20,27 @@ body {
     text-align: center;
 }
 
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.on {
+    color: #85754d;
+}
+
+.off {
+    color: white;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+}
+
 /* SEARCH PAGE */
 .navbar {
     background-color: #ffffff59;

@@ -61,15 +61,15 @@ export function StructuredSearch(props) {
         return <option key={location} value={location}>{location}</option>
     })
 
-    // Array of ratings, subject to change if we do thumbs up/down
-    let ratings = [5, 4, 3, 2, 1]
+    // // Array of ratings, subject to change if we do thumbs up/down
+    // let ratings = [5, 4, 3, 2, 1]
 
-    ratings = ratings.map((rating) => {
-        if (rating !== 5) {
-            return <option key={rating} value={rating}>{rating}+ stars</option>
-        }
-        return <option key={rating} value={rating}>{rating} stars</option>
-    })
+    // ratings = ratings.map((rating) => {
+    //     if (rating !== 5) {
+    //         return <option key={rating} value={rating}>{rating}+ stars</option>
+    //     }
+    //     return <option key={rating} value={rating}>{rating} stars</option>
+    // })
 
 
     return (
@@ -92,10 +92,10 @@ export function StructuredSearch(props) {
                                 <option value="">Floor</option>
                                 {floors}
                             </select>
-                            <select id="ratingSelect" className="nav-category dropdown-toggle form-select" onChange={changeRating} >
+                            {/* <select id="ratingSelect" className="nav-category dropdown-toggle form-select" onChange={changeRating} >
                                 <option value="">Rating</option>
                                 {ratings}
-                            </select>
+                            </select> */}
                             <select id="locationSelect" className="nav-category dropdown-toggle form-select" onChange={changeLocation} >
                                 <option value="">Location</option>
                                 {locations}

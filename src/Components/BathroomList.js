@@ -14,12 +14,12 @@ function BathroomCard(props) {
                         <div className="col-sm">
                             <h2 className="card-title my-0">{bathroomData.building}</h2>
                             <p className="card-text my-0 floor">{bathroomData.floor}</p>
-                            <div className="card-icons mt-2 mb-0 d-flex justify-content-center">
+                            {/* <div className="card-icons mt-2 mb-0 d-flex justify-content-center">
                                 <img src="img/Map.png" alt="Map" className="icon map-icon my-auto" />
                                 <img src="img/review.png" alt="Leave a review" className="icon review my-auto" />
                                 <img src="img/star.png" alt="Star" className="star my-auto" />
                                 <p className="rating my-auto">{bathroomData.rating}</p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
