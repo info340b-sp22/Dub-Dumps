@@ -12,11 +12,11 @@ export default function BathroomPage(props) {
 
     return (
         <div>
-            <h2 className="bathroom-header">{bathroom.building} - {bathroom.floor}</h2>
+            <h2 className="page-header">{bathroom.building} - {bathroom.floor}</h2>
             <img src={"/" + bathroom.src} alt={"Bathroom in " + bathroom.building + " on the " + bathroom.floor} className="bathroomPic" />
             <hr className="line-seperator" />
-            <h2 className="bathroom-header">Rate this bathroom!</h2>
-            <StarRating />
+            <h2 className="page-header">Rate this bathroom!</h2>
+            <StarRating currentUser={props.currentUser} bathroom={bathroom} />
         </div >
     )
 }

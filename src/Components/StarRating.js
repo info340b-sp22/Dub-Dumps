@@ -1,9 +1,25 @@
-import React, { useState } from 'react'
-// import { Rating } from 'react-simple-star-rating'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { getDatabase, onValue, ref, set as firebaseSet } from 'firebase/database';
 
-export default function StarRating() {
-    const [rating, setRating] = useState(0);
-    const [hover, setHover] = useState(0);
+export default function StarRating(props) {
+    let navigateTo = useNavigate();
+    const db = getDatabase();
+    const ratingRef = ref(db, "userData/" + props.currentUser.userId + "/ratings/" + props.bathroom.id)
+
+    const [rating, setRating] = useState(null);
+    const [hover, setHover] = useState(null);
+
+    // determine if user has rating for a bathroom when rendering stars
+    useEffect(() => {
+        onValue(ratingRef, (snapshot) => {
+            const currentRating = snapshot.val();
+            if (currentRating !== null) {
+                setRating(currentRating);
+            }
+        })
+    })
+
     return (
         <div className="star-rating">
             {[...Array(5)].map((star, index) => {
@@ -13,16 +29,21 @@ export default function StarRating() {
                         type="button"
                         key={index}
                         className={index <= (hover || rating) ? "on" : "off"}
-                        onClick={(
-
-                        ) => setRating(index)}
+                        onClick={() => {
+                            if (!props.currentUser.userId) {
+                                navigateTo("/signin");
+                            } else {
+                                setRating(index);
+                                firebaseSet(ratingRef, rating);
+                            }
+                        }}
                         onMouseEnter={() => setHover(index)}
                         onMouseLeave={() => setHover(rating)}
                     >
-                        <span className="star">&#9733;</span>
+                        <span className="star mx-2">&#9733;</span>
                     </button>
                 );
             })}
-        </div>
+        </div >
     );
 }
