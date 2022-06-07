@@ -14,7 +14,12 @@ export default function Header(props) {
     if (!props.currentUser.userId) {
         buttonToShow = <Link to="/signin" className="btn btn-warning signin-btn signin">Sign in</Link>
     } else {
-        buttonToShow = <button className="btn btn-warning signin-btn signout" onClick={handleSignOut}>Sign out</button>
+        let profilePic = props.currentUser.photoURL;
+        buttonToShow =
+            <div className="signOut">
+                <img src={profilePic} alt="profile picture" referrerPolicy='no-referrer'  className='profilePic' ></img>
+                <button className="btn btn-warning signin-btn signout" onClick={handleSignOut}>Sign out</button>
+            </div>
     }
 
     return (

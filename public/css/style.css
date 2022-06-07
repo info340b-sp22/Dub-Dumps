@@ -213,6 +213,12 @@ button {
     top:5px;
 }
 
+.profilePic {
+    border-radius:50%;
+    padding: .5em 1em;
+    width: 75px;
+}
+
 /* .searchbar {
     font-family: inherit;
     font-size: 1rem;
@@ -323,6 +329,10 @@ button {
         margin-right: 10px;
         font-size: 1em;
         width: 100px;
+    }
+
+    .signOut {
+        margin-left:auto;
     }
 
     .map p {

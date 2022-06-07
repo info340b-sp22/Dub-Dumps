@@ -9,7 +9,7 @@ function BathroomCard(props) {
     return (
         <Link to={'/search/br' + bathroomData.id} className="col-md-6 col-xl-4 d-flex justify-content-center" style={{ color: 'white', textDecoration: 'none' }}>
             <div className="card mb-4">
-                <img src={bathroomData.src} className="pb-1 br-img" />
+                <img src={bathroomData.src} className="pb-1 br-img" alt="the specific bathroom" />
                 <div className="card-body p-0">
                     <div className="row">
                         <div className="col-sm">
