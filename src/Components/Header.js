@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 export default function Header(props) {
     const handleSignOut = (evt) => {
         signOut(getAuth());
-        console.log(props.currentUser.displayName + " has logged out")
     }
 
     let buttonToShow = ''
@@ -19,8 +18,8 @@ export default function Header(props) {
             profilePic = "../img/defaultpic.jpg";
         }
         buttonToShow =
-            <div className="signOut">
-                <img src={profilePic} alt="profile picture" referrerPolicy='no-referrer'  className='profilePic' ></img>
+            <div className="signOut my-auto">
+                <img src={profilePic} alt="profile picture" referrerPolicy='no-referrer' className='profilePic' ></img>
                 <button className="btn btn-warning signin-btn signout" onClick={handleSignOut}>Sign out</button>
             </div>
     }

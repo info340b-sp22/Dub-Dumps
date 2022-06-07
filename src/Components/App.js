@@ -22,8 +22,6 @@ function App(props) {
 
     onAuthStateChanged(auth, (firebaseUser) => {
       if (firebaseUser) { //is defined, so "logged in"
-        console.log("authentication state changed");
-        console.log(firebaseUser);
         firebaseUser.userId = firebaseUser.uid;
         setCurrentUser(firebaseUser);
       }
