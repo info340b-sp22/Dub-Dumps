@@ -1,6 +1,7 @@
-import React, { useState } from 'react'; //import React Component
-import { getDatabase, ref, set as FirebaseSet } from 'firebase/database'
+import React from 'react'; //import React Component
 import { Link } from 'react-router-dom'
+import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+import StairsOutlinedIcon from '@mui/icons-material/StairsOutlined';
 
 function BathroomCard(props) {
     let bathroomData = props.bathroomData;
@@ -13,13 +14,16 @@ function BathroomCard(props) {
                     <div className="row">
                         <div className="col-sm">
                             <h2 className="card-title my-0">{bathroomData.building}</h2>
-                            <p className="card-text my-0 floor">{bathroomData.floor}</p>
-                            {/* <div className="card-icons mt-2 mb-0 d-flex justify-content-center">
-                                <img src="img/Map.png" alt="Map" className="icon map-icon my-auto" />
-                                <img src="img/review.png" alt="Leave a review" className="icon review my-auto" />
-                                <img src="img/star.png" alt="Star" className="star my-auto" />
-                                <p className="rating my-auto">{bathroomData.rating}</p>
-                            </div> */}
+                            <div className="br-info d-flex justify-content-around mx-auto my-1">
+                                <div className="mr-2">
+                                    <StairsOutlinedIcon fontSize="medium" className="my-auto" />
+                                    <p className="card-text my-0 floor">{bathroomData.floor}</p>
+                                </div>
+                                <div>
+                                    <ExploreOutlinedIcon fontSize="medium" className="compass my-auto" />
+                                    <p className="card-text location">{bathroomData.location}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
