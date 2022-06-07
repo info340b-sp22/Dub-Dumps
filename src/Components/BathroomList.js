@@ -16,12 +16,12 @@ function BathroomCard(props) {
                             <h2 className="card-title my-0">{bathroomData.building}</h2>
                             <div className="br-info d-flex justify-content-around mx-auto my-1">
                                 <div className="mr-2">
-                                    <StairsOutlinedIcon fontSize="medium" className="my-auto" />
-                                    <p className="card-text my-0 floor">{bathroomData.floor}</p>
+                                    <StairsOutlinedIcon fontSize="medium" className="stairs my-auto" />
+                                    <p className="card-text my-auto floor">{bathroomData.floor}</p>
                                 </div>
                                 <div>
                                     <ExploreOutlinedIcon fontSize="medium" className="compass my-auto" />
-                                    <p className="card-text location">{bathroomData.location}</p>
+                                    <p className="card-text location my-atuo">{bathroomData.location}</p>
                                 </div>
                             </div>
                         </div>
