@@ -1,7 +1,7 @@
 # Dub Dumps
 <img src="public/img/logo.png" alt="logo" width="200" />
 
-[Here's the link to our website!](https://dub-dumps-8ef51.web.app/)
+[Here's the link to our website!](https://dub-dumps-8ef51.web.app/home)
 
 ## Problem Description
 How can we make people feel more comfortable when they are most vulnerable? Our group aims to help people determine which bathroom on campus is right for them. Depending on the user some bathrooms may meet their sufficient needs while others do not. Some factors to consider are gender neutrality, stall size, privacy, and overall proximity. As of right now, it is hard to find a definitive list of the bathrooms on campus that also describe the features it offers. For instance, in more urgent scenarios, a user may need to find the nearest bathroom that offers free personal hygiene products. In these kinds of situations, the knowledge of what bathroom is conveniently available and equipped with necessary features can affect the results of the rest of the day. A previous solution to this problem was a blog called [UW bathrooms](https://uwbathrooms.netlify.app/) which ran from 2012 to 2016. As such, it has not been updated in 6 years and the bathroom descriptions and ratings have become outdated.  Thus, the goal of Dub Dumps is to support our current community's public health, promote personal hygiene, and ultimately make our campus a more accessible place. 
