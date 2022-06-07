@@ -15,6 +15,9 @@ export default function Header(props) {
         buttonToShow = <Link to="/signin" className="btn btn-warning signin-btn signin">Sign in</Link>
     } else {
         let profilePic = props.currentUser.photoURL;
+        if (profilePic === null) {
+            profilePic = "../img/defaultpic.jpg";
+        }
         buttonToShow =
             <div className="signOut">
                 <img src={profilePic} alt="profile picture" referrerPolicy='no-referrer'  className='profilePic' ></img>
