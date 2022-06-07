@@ -15,7 +15,9 @@ export const Box = styled.div`
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 1000px;
+    flex-grow: 1;
+    flex-basis: 0;
+    width: 100%;
     margin: 0 auto;
     margin-top: -50px;
 `
@@ -24,7 +26,12 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 15px 10px;
+  padding: 15px;
+  width: 100%;
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+    padding: 8px;
+  }
 `;
    
 export const Row = styled.div`
@@ -33,13 +40,14 @@ export const Row = styled.div`
   gap: 4px;
   align-items: center;
   justify-items: center;
+  padding: 5px;
 `;
    
 export const FooterLink = styled.a`
   font-family: "Encode Sans", sans-serif;
   color: #fff;
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
    
   &:hover {
@@ -47,31 +55,31 @@ export const FooterLink = styled.a`
       transition: 200ms ease-in;
   }
   @media screen and (max-width: 720px) {
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 10px;
   }
 `;
    
 export const Heading = styled.p`
   font-family: "Encode Sans", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: bold;
   @media screen and (max-width: 720px) {
     font-size: 16px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 `;
 
 export const Text = styled.p`
   font-family: "Encode Sans", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   color: #fff;
   margin-bottom: -40px;
   margin-top: 20px;
   text-align: center;
   @media screen and (max-width: 720px) {
-    font-size: 12px;
+    font-size: 10px;
   }
 `;
