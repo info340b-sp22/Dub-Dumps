@@ -18,7 +18,7 @@ export default function StarRating(props) {
                 setRating(currentRating);
             }
         })
-    })
+    }, [])
 
     return (
         <div className="star-rating">
