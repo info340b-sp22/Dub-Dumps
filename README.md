@@ -1,7 +1,7 @@
 # Dub Dumps
 <img src="public/img/logo.png" alt="logo" width="200" />
 
-## As of 2023, DubDumps is no longer maintained.
+**As of 2023, DubDumps is no longer maintained.**
 [Here's the link to our website!](https://dub-dumps-8ef51.web.app/home)
 
 ## Problem Description
